@@ -9,7 +9,7 @@
         {type: "Draw Input", color: "bg-black", content: "shrek on honeymoon"},
         {type: "Draw Output", color: 'bg-black', content: 'src\media\shrek_on_honeymoon.png'},
         {type: "Search Input", color: 'bg-blue-400', content: "proomptr documentation"},
-        {type: "Youtube Input", color: 'bg-red-400', content: "wooper"},
+        {type: "Youtube Input", color: 'bg-red-500', content: "wooper"},
     ]
 
     function cycleState() {
@@ -25,7 +25,7 @@
 </script>
 
 <div 
-  class='w-1/2 flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] p-2 rounded-lg '
+  class='w-1/2 z-[2] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] p-2 rounded-lg '
 
 >
     {#if states[state].type.includes('Input')}

@@ -64,11 +64,11 @@
             </div>
         </div>
         <!-- Demo Video -->
-        <div class='w-full flex items-center justify-center'>
+        <!-- <div class='w-full flex items-center justify-center'>
             <div class='bg-neutral-900 rounded-lg p-4 w-1/2'>
                 DEMO VID
             </div>
-        </div>
+        </div> -->
 
         <Footer/>
     </div>
