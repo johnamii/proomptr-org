@@ -1,7 +1,7 @@
 <script>
-    import { scale, fade, slide, fly } from 'svelte/transition';
+    import { slide, fly } from 'svelte/transition';
 
-    let state = 3;
+    let state = 0;
 
     let states = [
         {type: "Chat Input", color: "bg-green-300", content: "What's the meaning of life?"},
@@ -16,7 +16,7 @@
         state = (state + 1) % states.length;
     }
 
-    setInterval(cycleState, 5000);
+    setInterval(cycleState, 6000);
 
     let cursorVisible = true;
     setInterval(() => {
