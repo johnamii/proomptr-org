@@ -1,32 +1,32 @@
 <script>
-    import Proomptr from "$lib/Proomptr.svelte";
-
+    import MainView from "$lib/MainView.svelte";
+    import InfoView from '$lib/InfoView.svelte'
+    
+    let mainView = true;
 </script>
 
 <div class='w-screen h-screen flex flex-col bg-neutral-800 overflow-hidden'>
-    <div class='h-full w-full flex flex-col items-center justify-center gap-6'>
-        <h1 class='text-5xl text-white'>Proomptr</h1>
-        <div class='text-neutral-400 text-lg'>
-            "A lightweight desktop tool to proompt your AI overlords."
-        </div>  
-        <!-- Proomptr Copy -->
-        <Proomptr/>
-        
-        <!-- Download -->
-        <div class='flex flex-col gap-2 items-center justify-center bg-neutral-900 text-white w-1/3 rounded-lg p-4'>
-            <h1 class='text-center text-lg'>Downloads</h1>
-            <!-- <div class='bg-neutral-800 h-[1px] w-3/4'></div>
-
-            <div class='w-full p-4 flex flex-col items-start justify-center gap-2'>
-                <div> &bull; <a href='https://proomptr.org' class='text-blue-500 underline'> Windows x64 Installer </a></div>
-                <div> &bull; <a href='https://proomptr.org' class='text-blue-500 underline'> MacOS ARM64 Installer </a></div>
-            </div> -->
-        </div>
-    </div>
-    <div class='absolute bottom-0 w-full flex flex-col items-center justify-center text-white gap-2'>
-        Learn More
-        <span class='material-symbols-outlined shadow-lg'>
-            expand_more
-        </span>
-    </div>
+    {#if mainView}
+        <MainView/>
+        <!--  -->
+        <button on:click={() => mainView = false} class='absolute bottom-0 pb-2 w-full flex items-center justify-center text-white hover:bg-gradient-to-t from-neutral-900 to-neutral-800'>
+            <div class='flex flex-col items-center gap-2'>
+                Learn More
+                <span class='material-symbols-outlined shadow-lg' style='animation: bounce 1s infinite; '>
+                    expand_more
+                </span>
+            </div>
+        </button>
+    {:else}
+        <button on:click={() => mainView = true} class='absolute top-0 pt-2 w-full flex items-center justify-center text-white hover:bg-gradient-to-b from-neutral-900 to-neutral-800'>
+            <div class='flex flex-col items-center gap-2'>
+                <span class='material-symbols-outlined shadow-lg' style='animation: bounce 1s infinite; '>
+                    expand_less
+                </span>
+                Learn Less
+            </div>
+        </button>
+        <!--  -->
+        <InfoView/>
+    {/if}
 </div>
