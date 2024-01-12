@@ -4,7 +4,7 @@
         <span class='material-symbols-outlined text-red-400'>favorite</span>
         by <a href='https://www.johnamii.com' class='hover:text-blue-300'>John Flanagan</a>
         <button class='flex items-center hover:bg-neutral-700 p-1 rounded-md'>
-            <img class='h-4' src='src\media\github-mark-white.png' alt='github'/>
+            <img class='h-4' src='https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg' alt='github'/>
         </button>
     </div>
     <div class='flex items-center gap-4'>
