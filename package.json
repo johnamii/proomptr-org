@@ -1,6 +1,5 @@
 {
 	"name": "proomptr-org",
-	"homepage": "https://proomptr.org",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -14,7 +13,7 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -39,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-node": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1"
 	}
 }
