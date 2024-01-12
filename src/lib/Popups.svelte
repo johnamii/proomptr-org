@@ -69,7 +69,7 @@
                 Windows
                 {#each windowsDownload as download}
                 <div class='h-[1px] w-1/2 bg-neutral-700'/>
-                <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href=''>x64 Installer</a></div>
+                <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href='https://www.proomptr.org'>x64 Installer</a></div>
                 {/each}
             </div>
             <div class='h-3/4 w-[1px] bg-neutral-700'/>
@@ -78,7 +78,7 @@
                 {#each macDownloads as download}
                     
                     <div class='h-[1px] w-1/2 bg-neutral-700'/>
-                    <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href=''>ARM64 Installer</a></div>
+                    <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href='https://www.proomptr.org'>ARM64 Installer</a></div>
 
                 {/each}
             </div>
