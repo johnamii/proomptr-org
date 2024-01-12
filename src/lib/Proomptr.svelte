@@ -7,7 +7,7 @@
         {type: "Chat Input", color: "bg-green-300", content: "What's the meaning of life?"},
         {type: "Chat Output", color: "bg-green-300", content: "The meaning of life is a highly personalized and philosophical concept. It often relates to one's individual purpose, personal fulfillment, and the understanding of their own existence. It can be influenced by various factors including religious beliefs, relationships, personal achievements, or making a positive impact on the world."},
         {type: "Draw Input", color: "bg-black", content: "shrek on honeymoon"},
-        {type: "Draw Output", color: 'bg-black', content: 'public\shrek_on_honeymoon.png'},
+        {type: "Draw Output", color: 'bg-black', content: ''},
         {type: "Search Input", color: 'bg-blue-400', content: "proomptr documentation"},
         {type: "Youtube Input", color: 'bg-red-500', content: "wooper"},
     ]
@@ -63,7 +63,7 @@
                 {:else if state == 3}
                     <div class='relative rounded-md'>
                         <div class='absolute w-full text-neutral-100 text-center top-0 left-0 bg-[rgba(0,0,0,0.2)] p-1'>"shrek on honeymoon"</div>
-                        <img src={states[state].content} alt='Should be a pic here...'/>
+                        <img src='src\lib\assets\shrek.png' alt='Should be a pic here...'/>
                     </div>
                 {/if}
             </div>

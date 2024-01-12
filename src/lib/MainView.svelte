@@ -11,7 +11,7 @@
     </div>  
     <!-- Proomptr Copy -->
     <div class=' h-3/5 w-full relative flex items-center justify-center'>
-        <img class='h-full w-3/5 absolute z-[1] rounded-lg' src='public\desktop_background.jpg' alt='desktop'/>
+        <img class='h-full w-3/5 absolute z-[1] rounded-lg' src='src\lib\assets\desktop.jpg' alt='desktop'/>
         <Proomptr/>
     </div>
     
