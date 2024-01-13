@@ -2,7 +2,7 @@
     import { slide, fly } from 'svelte/transition';
     import shrek from '$lib/assets/shrek.png';
 
-    let state = 3;
+    let state = 0;
 
     let states = [
         {type: "Chat Input", color: "bg-green-300", content: "What's the meaning of life?"},
