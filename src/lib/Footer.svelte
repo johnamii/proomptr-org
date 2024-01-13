@@ -1,4 +1,4 @@
-<div class='w-full bg-neutral-900 text-white flex items-center justify-evenly p-4'>
+<div class='fixed bottom-0 w-full bg-neutral-900 text-white flex items-center justify-evenly p-4'>
     <div class='flex items-center gap-2'>
         Made with
         <span class='material-symbols-outlined text-red-400'>favorite</span>

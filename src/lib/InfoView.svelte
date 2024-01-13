@@ -4,21 +4,22 @@
 </script>
 
 <div transition:fly|local={{duration:500, y:500}} class='h-full w-full flex items-end justify-center gap-6l'>
-    <div class='border-t border-neutral-700 pt-2 w-full h-[90%] max-h-[90%] flex flex-col items-center gap-12 text-neutral-400 overflow-y-scroll'>
+    <div class='border-t border-neutral-700 w-full h-[90%] max-h-[100%] flex flex-col items-center gap-12 text-neutral-400 overflow-y-scroll py-24'>
         <!-- HEADER -->
-        <div class="bg-neutral-900 rounded-lg p-4 w-1/2 text-center flex flex-col gap-4">
-            <h1 class='text-2xl text-white'>What is Proomptr?</h1>
-            <p class='text-md p-2'>
-                Proomptr is a lightweight desktop app for Windows and MacOS designed to provide the quickest access to 
-                OpenAI premium toolsl without any subscriptions. You pay OpenAI by usage only, providing access at a much lower cost.
-
-                <br/>
-                <b class='font-bold'>Proomptr itself is free.</b> 
-
-                <br/>
-                Everything is available at one keypress, including more convenience features like instant Google and YouTube search.
-                Everything is just one Proompt away.
-            </p>
+        <div class='w-full min-h-[60%] flex items-center justify-center '>
+            <div class="bg-neutral-900 rounded-lg p-4 w-1/2 text-center flex flex-col gap-4">
+                <h1 class='text-2xl text-white'>What is Proomptr?</h1>
+                <p class='text-md p-2'>
+                    Proomptr is a lightweight desktop app for Windows and MacOS designed to provide the quickest access to 
+                    OpenAI premium toolsl without any subscriptions. You pay OpenAI by usage only, providing access at a much lower cost.
+    
+                    <br/>
+                    <b class='font-bold'>Proomptr itself is free.</b> 
+                    <br/>
+                    Everything is available at one keypress, including more convenience features like instant Google and YouTube search.
+                    Everything is just one Proompt away.
+                </p>
+            </div>
         </div>
         <!-- CHAT -->
         <div class='w-full flex'>

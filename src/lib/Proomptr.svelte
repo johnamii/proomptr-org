@@ -2,7 +2,7 @@
     import { slide, fly } from 'svelte/transition';
     import shrek from '$lib/assets/shrek.png';
 
-    let state = 0;
+    let state = 3;
 
     let states = [
         {type: "Chat Input", color: "bg-green-300", content: "What's the meaning of life?"},
@@ -26,7 +26,7 @@
 </script>
 
 <div 
-  class='w-1/2 z-[2] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] p-2 rounded-lg '
+  class='w-[90%] sm:w-1/2 z-[2] text-xs sm:text-base flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] sm:p-2 rounded-lg '
 
 >
     {#if states[state].type.includes('Input')}
@@ -35,7 +35,7 @@
             {#each states as mode, i}
                 {#if i == state}
                 <div 
-                    class='absolute p-1 px-3 {states[state].color} text-white rounded-md'
+                    class='absolute p-[2px] px-[8px] sm:p-1 sm:px-3 {states[state].color} text-white rounded-md'
                     in:fly|local={{y:-100, duration: 400}}
                     out:fly|local={{y:100, duration: 400}}
                 >
@@ -49,22 +49,22 @@
                     <div class='bg-neutral-700 min-h-1/4 max-h-1/4 min-w-[1px]'/>
                 {/if}
             </div>
-            <span class='material-symbols-outlined text-[rgba(0,0,0,0.5)]'>
+            <span class='material-symbols-outlined text-[rgba(0,0,0,0.5)] text-sm sm:text-base'>
                 settings
             </span>
         </div>
         {:else}
         <div transition:slide={{duration:500}} class='flex flex-col items-center justify-center gap-1 px-2'>
             <span class='material-symbols-outlined text-xs'> expand_less </span>
-            <div class='bg-[rgba(0,0,0,0.05)] p-4  rounded-md text-neutral-700'>
+            <div class='bg-[rgba(0,0,0,0.05)] p-4 rounded-md text-neutral-700 flex flex-col items-center justify-center'>
                 {#if state == 1}
                     <div class='px-2'>
                         {states[state].content}
                     </div>
                 {:else if state == 3}
-                    <div class='relative rounded-md'>
-                        <div class='absolute w-full text-neutral-100 text-center top-0 left-0 bg-[rgba(0,0,0,0.2)] p-1'>"shrek on honeymoon"</div>
-                        <img src={shrek} alt='Should be a pic here...'/>
+                    <div class='relative rounded-md flex items-center justify-center'>
+                        <div class='absolute sm:w-full text-neutral-100 text-center top-0 sm:left-0 bg-[rgba(0,0,0,0.2)] p-1'>"shrek on honeymoon"</div>
+                        <img src={shrek} alt='Should be a pic here...' class='w-1/2 sm:w-full'/>
                     </div>
                 {/if}
             </div>

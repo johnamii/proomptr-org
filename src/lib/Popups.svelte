@@ -35,7 +35,7 @@
     }
 </script>
 
-<div class='flex gap-4 items-center justify-center z-[4]'>
+<div class='hidden sm:flex gap-4 items-center justify-center z-[4]'>
     <button 
         class={(windowVisible !== WINDOW.NONE? 'bg-neutral-100 text-neutral-900' : 'bg-neutral-900 text-white') + ' rounded-lg p-4 text-center text-lg font-bold hover:text-blue-400'}
         on:click={() => flipWindow(WINDOW.DOWNLOADS)}
@@ -83,7 +83,7 @@
                 {/each}
             </div>
         {:else if windowVisible == WINDOW.GETTINGSTARTED}
-            <div class='w-full h-full p-8 flex flex-col items-start gap-4 text-lg'>
+            <div class='w-full h-full p-8 flex flex-col items-start gap-6 text-lg'>
                 <div>
                     1. Download and install Proomptr.
                 </div>
@@ -92,7 +92,6 @@
                 </div>
                 <div>
                     3. Create an official <a class='text-blue-500 hover:underline' href='https://platform.openai.com/signup/'>OpenAI Account</a>, add a payment method,
-                    
                 </div>
                 <div>
                     4. Open
@@ -100,7 +99,12 @@
                     , create one, and paste it into Proomptr's options.
                 </div>
                 <div>
-                    5. Start Proompting.
+                    5. Review 
+                    <a class='text-blue-400 hover:underline' href='https://openai.com/pricing/'>OpenAI pricing per model</a>
+                     so you know what to expect.
+                </div>
+                <div>
+                    6. Start Proompting.
                 </div>
             </div>
         {:else}
