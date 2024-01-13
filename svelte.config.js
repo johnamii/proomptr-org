@@ -14,7 +14,7 @@ const config = {
 		adapter: adapter(),
 
 		paths: {
-			base: 'proomptr-org',
+			base: '/proomptr-org',
 		},
 
 		outDir: 'build',
