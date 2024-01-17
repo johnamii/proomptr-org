@@ -49,7 +49,7 @@
                     <div class='bg-neutral-700 min-h-1/4 max-h-1/4 min-w-[1px]'/>
                 {/if}
             </div>
-            <span class='material-symbols-outlined text-[rgba(0,0,0,0.5)] text-sm sm:text-base'>
+            <span class='material-symbols-outlined text-[rgba(0,0,0,0.5)] text-lg sm:text-2xl'>
                 settings
             </span>
         </div>

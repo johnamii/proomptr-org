@@ -3,6 +3,8 @@
     import Popups from "./Popups.svelte";
     import { fly } from "svelte/transition";
     import background from '$lib/assets/desktop.jpg';
+
+    export let downloads;
 </script>
 
 <div transition:fly|local={{duration:500, y:-500}} class='h-full w-full pt-0 flex flex-col items-center justify-start pt-4 gap-6'>
@@ -12,7 +14,7 @@
     </div>  
     <!-- Proomptr Copy -->
     <div class=' h-3/5 w-full relative flex items-center justify-center'>
-        <img class='h-[75%] sm:h-full w-[95%] sm:w-3/5 absolute z-[1] rounded-lg' src={background} alt='desktop'/>
+        <img class='aspect-video sm:h-full w-[95%] sm:w-3/5 absolute z-[1] rounded-lg' src={background} alt='desktop'/>
         <Proomptr/>
     </div>
     <div class='sm:hidden flex items-center gap-2 mb-4 w-[90%] bg-neutral-900 rounded-md p-4 text-neutral-400 text-xs'>
@@ -25,5 +27,5 @@
         <br/>
         Please visit the full site and check it out!
     </div>
-    <Popups/>
+    <Popups downloads={downloads}/>
 </div>

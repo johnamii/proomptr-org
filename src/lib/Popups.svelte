@@ -33,6 +33,8 @@
             windowVisible = val;
         }
     }
+
+    export let downloads: any;
 </script>
 
 <div class='hidden sm:flex gap-4 items-center justify-center z-[4]'>
@@ -58,30 +60,48 @@
 {#if windowVisible !== WINDOW.NONE}
 <div class='absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.1)] z-[3] blur'/>
 <div 
-  class='z-[5] absolute h-3/4 w-1/2 top-6 text-white text-xl text-center bg-[rgba(10,10,10,0.95)] rounded-lg flex flex-col items-center'
+  class='z-[5] absolute h-3/4 w-3/4 top-6 text-white text-xl text-center bg-[rgba(10,10,10,0.95)] rounded-lg flex flex-col items-center'
   transition:fly={{duration:300, y:100}}
 >
     <div class=' text-3xl p-8 w-full'>{windowVisible == WINDOW.DOWNLOADS ? "Downloads" : windowVisible == WINDOW.GETTINGSTARTED ? "Getting Started" : "Documentation"}</div>
     <div class='h-[1px] w-1/2 bg-neutral-700'/>
     <div class='flex h-full w-full items-center p-4'>
         {#if windowVisible == WINDOW.DOWNLOADS}
+        {#await downloads}
+            <div></div>
+        {:then downloads} 
             <div class={boxClass}>
                 Windows
-                {#each windowsDownload as download}
-                <div class='h-[1px] w-1/2 bg-neutral-700'/>
-                <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href='https://www.proomptr.org'>x64 Installer</a></div>
+                {#each downloads ?? [] as download}
+                    {#if download.tag.includes('Windows')}
+                    <div class='h-[1px] w-1/2 bg-neutral-700'/>
+                    <div class='flex gap-4 items-center'>
+                        &bull;
+                        <a class={linkClass} href={download.url}>
+                            {download.name} {download.tag} Installer
+                        </a>
+                    </div>
+                    {/if}
                 {/each}
+                
             </div>
             <div class='h-3/4 w-[1px] bg-neutral-700'/>
             <div class={boxClass}>
                 MacOS
-                {#each macDownloads as download}
-                    
+                {#each downloads ?? [] as download}
+                    {#if download.tag.includes("Mac")}
                     <div class='h-[1px] w-1/2 bg-neutral-700'/>
-                    <div class='flex gap-4 items-center'>&bull;<a class={linkClass} href='https://www.proomptr.org'>ARM64 Installer</a></div>
-
+                    <div class='flex gap-4 items-center'>
+                        &bull;
+                        <a class={linkClass} href={download.url}>
+                            {download.name} {download.tag} Installer
+                        </a>
+                    </div>
+                    {/if}
                 {/each}
             </div>
+        {/await}
+            
         {:else if windowVisible == WINDOW.GETTINGSTARTED}
             <div class='w-full h-full p-8 flex flex-col items-start gap-6 text-lg'>
                 <div>
