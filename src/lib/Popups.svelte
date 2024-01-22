@@ -103,7 +103,7 @@
         {/await}
             
         {:else if windowVisible == WINDOW.GETTINGSTARTED}
-            <div class='w-full h-full p-8 flex flex-col items-start gap-6 text-lg'>
+            <div class='w-full h-full p-8 max-h-92 flex flex-col items-start text-start gap-6 text-base overflow-y-scroll'>
                 <div>
                     1. Download and install Proomptr.
                 </div>
@@ -125,6 +125,12 @@
                 </div>
                 <div>
                     6. Start Proompting.
+                </div>
+                <div>
+                    7. Read <a class='text-blue-400 hover:underline' href='https://platform.openai.com/docs/guides/rate-limits?context=tier-free'>OpenAI API Rate Limits</a> to learn
+                    how to access gpt-4 and dall-e-3 models. Basically you have to "have spent" $5 to reach that tier. It's simplest to get
+                    $5 credit immediately and have that to spend on your upcoming usage. Note that the average average usage of Proomptr will typically
+                    fall way under OpenAI's ChatGPT Premium which is $20/month.
                 </div>
             </div>
         {:else}
