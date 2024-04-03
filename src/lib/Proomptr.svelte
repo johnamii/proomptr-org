@@ -26,7 +26,7 @@
 </script>
 
 <div 
-  class='w-[90%] sm:w-1/2 z-[2] text-xs sm:text-base flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] sm:p-2 rounded-lg '
+  class='absolute w-[90%] sm:w-3/4 z-[2] text-xs sm:text-base flex flex-col items-center justify-center bg-[rgba(255,255,255,0.9)] sm:p-2 rounded-lg '
 
 >
     {#if states[state].type.includes('Input')}
