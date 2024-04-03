@@ -1,14 +1,17 @@
-<div class='fixed bottom-0 w-full bg-neutral-900 text-white flex items-center justify-evenly p-4'>
+<div class='hidden w-full bg-neutral-900 text-white sm:flex items-center justify-evenly p-2'>
     <div class='flex items-center gap-2'>
         Made with
-        <span class='material-symbols-outlined text-red-400'>favorite</span>
-        by <a href='https://www.johnamii.com' class='hover:text-blue-300'>John Flanagan</a>
-        <button class='flex items-center hover:bg-neutral-700 p-1 rounded-md'>
+        <span class='material-symbols-outlined text-red-400 text-sm'>favorite</span>
+        by 
+        <a href='https://www.johnamii.com' class='hover:text-blue-300'>
+            John Flanagan
+        </a>
+        <a class='flex items-center hover:bg-neutral-700 p-1 rounded-md' href='https://www.github.com/johnamii/proomptr-org'>
             <img class='h-4' src='https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg' alt='github'/>
-        </button>
+        </a>
     </div>
     <div class='flex items-center gap-4'>
-        Tech Stack
+        Stack: 
         <div class='min-h-3/4 h-3/4 min-w-[1px] w-[1px] border border-white'/>
         <img class='h-6' src='https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg' alt='svelte'/>
         <img class='h-6' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png' alt='TypeScript'/>
