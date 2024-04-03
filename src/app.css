@@ -9,14 +9,6 @@
 .body {
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.5px;
-}
-
-*{}::-webkit-scrollbar-track {
-    background: #222;
-}::-webkit-scrollbar-thumb {
-    background: #444;
-}::-ms-scrollbar-thumb {
-    background: #444;
-}::-ms-scrollbar-track {
-    background: #222;
+}::-webkit-scrollbar {
+    display: none;
 }
